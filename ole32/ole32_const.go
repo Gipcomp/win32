@@ -1,0 +1,60 @@
+// Copyright 2010 The win Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+// +build windows
+
+package ole32
+
+const (
+	CLSCTX_INPROC_SERVER          = 0x1
+	CLSCTX_INPROC_HANDLER         = 0x2
+	CLSCTX_LOCAL_SERVER           = 0x4
+	CLSCTX_INPROC_SERVER16        = 0x8
+	CLSCTX_REMOTE_SERVER          = 0x10
+	CLSCTX_INPROC_HANDLER16       = 0x20
+	CLSCTX_RESERVED1              = 0x40
+	CLSCTX_RESERVED2              = 0x80
+	CLSCTX_RESERVED3              = 0x100
+	CLSCTX_RESERVED4              = 0x200
+	CLSCTX_NO_CODE_DOWNLOAD       = 0x400
+	CLSCTX_RESERVED5              = 0x800
+	CLSCTX_NO_CUSTOM_MARSHAL      = 0x1000
+	CLSCTX_ENABLE_CODE_DOWNLOAD   = 0x2000
+	CLSCTX_NO_FAILURE_LOG         = 0x4000
+	CLSCTX_DISABLE_AAA            = 0x8000
+	CLSCTX_ENABLE_AAA             = 0x10000
+	CLSCTX_FROM_DEFAULT_CONTEXT   = 0x20000
+	CLSCTX_ACTIVATE_32_BIT_SERVER = 0x40000
+	CLSCTX_ACTIVATE_64_BIT_SERVER = 0x80000
+	CLSCTX_ENABLE_CLOAKING        = 0x100000
+	CLSCTX_PS_DLL                 = 0x80000000
+	CLSCTX_INPROC                 = CLSCTX_INPROC_SERVER | CLSCTX_INPROC_HANDLER
+	CLSCTX_ALL                    = CLSCTX_INPROC_SERVER | CLSCTX_INPROC_HANDLER | CLSCTX_LOCAL_SERVER | CLSCTX_REMOTE_SERVER
+	CLSCTX_SERVER                 = CLSCTX_INPROC_SERVER | CLSCTX_LOCAL_SERVER | CLSCTX_REMOTE_SERVER
+)
+
+const (
+	COINIT_APARTMENTTHREADED = 0x2 // Apartment model
+	COINIT_MULTITHREADED     = 0x0 // OLE calls objects on any thread.
+	COINIT_DISABLE_OLE1DDE   = 0x4 // Don't use DDE for Ole1 support.
+	COINIT_SPEED_OVER_MEMORY = 0x8 // Trade memory for speed.
+)
+
+// Verbs for IOleObject.DoVerb
+const (
+	OLEIVERB_PRIMARY          = 0
+	OLEIVERB_SHOW             = -1
+	OLEIVERB_OPEN             = -2
+	OLEIVERB_HIDE             = -3
+	OLEIVERB_UIACTIVATE       = -4
+	OLEIVERB_INPLACEACTIVATE  = -5
+	OLEIVERB_DISCARDUNDOSTATE = -6
+)
+
+// OLECLOSE constants
+const (
+	OLECLOSE_SAVEIFDIRTY = 0
+	OLECLOSE_NOSAVE      = 1
+	OLECLOSE_PROMPTSAVE  = 2
+)
