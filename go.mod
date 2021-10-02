@@ -1,5 +1,5 @@
 module github.com/Gipcomp/winapi
 
-go 1.16
+go 1.17
 
-require golang.org/x/sys v0.0.0-20211001092434-39dca1131b70
+require golang.org/x/sys v0.0.0-20211002104244-808efd93c36d
