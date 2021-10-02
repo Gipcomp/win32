@@ -6,7 +6,7 @@
 
 package objidl
 
-import "github.com/D4v1dW3bb/winapi/ole32"
+import "github.com/Gipcomp/winapi/ole32"
 
 type IDataObjectVtbl struct {
 	ole32.IUnknownVtbl

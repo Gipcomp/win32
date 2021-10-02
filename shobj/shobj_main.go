@@ -6,7 +6,7 @@
 
 package shobj
 
-import "github.com/D4v1dW3bb/winapi/ole32"
+import "github.com/Gipcomp/winapi/ole32"
 
 var (
 	CLSID_TaskbarList = ole32.CLSID{0x56FDF344, 0xFD6D, 0x11d0, [8]byte{0x95, 0x8A, 0x00, 0x60, 0x97, 0xC9, 0xA0, 0x90}}

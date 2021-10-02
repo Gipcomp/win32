@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/D4v1dW3bb/winapi/gdi32"
+	"github.com/Gipcomp/winapi/gdi32"
 )
 
 func GdipCreateBitmapFromFile(filename *uint16, bitmap **GpBitmap) GpStatus {

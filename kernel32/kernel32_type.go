@@ -6,7 +6,7 @@
 
 package kernel32
 
-import "github.com/D4v1dW3bb/winapi/handle"
+import "github.com/Gipcomp/winapi/handle"
 
 // To solve import cycle:
 // HANDLE moved to handle.HANDLE

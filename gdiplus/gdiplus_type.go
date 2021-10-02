@@ -6,7 +6,7 @@
 
 package gdiplus
 
-import "github.com/D4v1dW3bb/winapi/win"
+import "github.com/Gipcomp/winapi/win"
 
 type GpStatus int32
 

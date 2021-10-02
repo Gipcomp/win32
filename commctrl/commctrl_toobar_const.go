@@ -7,8 +7,8 @@
 package commctrl
 
 import (
-	"github.com/D4v1dW3bb/winapi/comctl32"
-	"github.com/D4v1dW3bb/winapi/user32"
+	"github.com/Gipcomp/winapi/comctl32"
+	"github.com/Gipcomp/winapi/user32"
 )
 
 const (

@@ -7,11 +7,11 @@
 package user32
 
 import (
-	"github.com/D4v1dW3bb/winapi/gdi32"
-	"github.com/D4v1dW3bb/winapi/handle"
-	"github.com/D4v1dW3bb/winapi/kernel32"
-	"github.com/D4v1dW3bb/winapi/win"
-	"github.com/D4v1dW3bb/winapi/winuser"
+	"github.com/Gipcomp/winapi/gdi32"
+	"github.com/Gipcomp/winapi/handle"
+	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/winapi/winuser"
 )
 
 type NMBCDROPDOWN struct {

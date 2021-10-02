@@ -7,11 +7,11 @@
 package richedit
 
 import (
-	"github.com/D4v1dW3bb/winapi/gdi32"
-	"github.com/D4v1dW3bb/winapi/handle"
-	"github.com/D4v1dW3bb/winapi/kernel32"
-	"github.com/D4v1dW3bb/winapi/user32"
-	"github.com/D4v1dW3bb/winapi/win"
+	"github.com/Gipcomp/winapi/gdi32"
+	"github.com/Gipcomp/winapi/handle"
+	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/winapi/user32"
+	"github.com/Gipcomp/winapi/win"
 )
 
 type TEXTMODE int32

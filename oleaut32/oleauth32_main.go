@@ -7,7 +7,7 @@
 package oleaut32
 
 import (
-	"github.com/D4v1dW3bb/winapi/ole32"
+	"github.com/Gipcomp/winapi/ole32"
 	"golang.org/x/sys/windows"
 )
 

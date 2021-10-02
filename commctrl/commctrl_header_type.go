@@ -7,8 +7,8 @@
 package commctrl
 
 import (
-	"github.com/D4v1dW3bb/winapi/gdi32"
-	"github.com/D4v1dW3bb/winapi/user32"
+	"github.com/Gipcomp/winapi/gdi32"
+	"github.com/Gipcomp/winapi/user32"
 )
 
 type HDITEM struct {

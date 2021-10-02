@@ -10,11 +10,11 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/D4v1dW3bb/winapi/kernel32"
-	"github.com/D4v1dW3bb/winapi/oaidl"
-	"github.com/D4v1dW3bb/winapi/ole32"
-	"github.com/D4v1dW3bb/winapi/oleaut32"
-	"github.com/D4v1dW3bb/winapi/win"
+	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/winapi/oaidl"
+	"github.com/Gipcomp/winapi/ole32"
+	"github.com/Gipcomp/winapi/oleaut32"
+	"github.com/Gipcomp/winapi/win"
 )
 
 func (obj *ITextDocument) QueryInterface(riid ole32.REFIID, ppvObject *unsafe.Pointer) win.HRESULT {

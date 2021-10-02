@@ -6,7 +6,7 @@
 
 package user32
 
-import "github.com/D4v1dW3bb/winapi/handle"
+import "github.com/Gipcomp/winapi/handle"
 
 const CW_USEDEFAULT = ^0x7fffffff
 

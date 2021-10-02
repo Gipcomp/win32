@@ -6,7 +6,7 @@
 
 package oaidl
 
-import "github.com/D4v1dW3bb/winapi/ole32"
+import "github.com/Gipcomp/winapi/ole32"
 
 var (
 	IID_ITypeInfo = ole32.IID{0x00020401, 0x0000, 0x0000, [8]byte{0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46}}

@@ -1,4 +1,4 @@
-module github.com/D4v1dW3bb/winapi
+module github.com/Gipcomp/winapi
 
 go 1.16
 

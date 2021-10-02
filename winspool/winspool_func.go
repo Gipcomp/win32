@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/D4v1dW3bb/winapi/gdi32"
-	"github.com/D4v1dW3bb/winapi/handle"
+	"github.com/Gipcomp/winapi/gdi32"
+	"github.com/Gipcomp/winapi/handle"
 )
 
 func DeviceCapabilities(pDevice, pPort *uint16, fwCapability uint16, pOutput *uint16, pDevMode *gdi32.DEVMODE) uint32 {

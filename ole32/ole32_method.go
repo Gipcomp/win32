@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/D4v1dW3bb/winapi/win"
+	"github.com/Gipcomp/winapi/win"
 )
 
 func (cf *IClassFactory) Release() uint32 {

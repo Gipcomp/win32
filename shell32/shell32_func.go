@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/D4v1dW3bb/winapi/handle"
-	"github.com/D4v1dW3bb/winapi/kernel32"
-	"github.com/D4v1dW3bb/winapi/user32"
-	"github.com/D4v1dW3bb/winapi/win"
+	"github.com/Gipcomp/winapi/handle"
+	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/winapi/user32"
+	"github.com/Gipcomp/winapi/win"
 )
 
 func DragAcceptFiles(hWnd handle.HWND, fAccept bool) bool {
