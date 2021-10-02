@@ -1,3 +1,19 @@
+// Copyright 2010 The win Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+// +build windows
+
+package oleaut32
+
+import (
+	"fmt"
+	"syscall"
+	"unsafe"
+
+	"github.com/D4v1dW3bb/winapi/win"
+)
+
 func StringToBSTR(value string) *uint16 /*BSTR*/ {
 	// IMPORTANT: Don't forget to free the BSTR value when no longer needed!
 	return SysAllocString(value)
@@ -22,7 +38,7 @@ func VariantI4ToInt(value *VAR_I4) int32 {
 }
 
 func BoolToVariantBool(value bool) *VAR_BOOL {
-	return &VAR_BOOL{vt: VT_BOOL, boolVal: VARIANT_BOOL(BoolToBOOL(value))}
+	return &VAR_BOOL{vt: VT_BOOL, boolVal: VARIANT_BOOL(win.BoolToBOOL(value))}
 }
 
 func VariantBoolToBool(value *VAR_BOOL) bool {
