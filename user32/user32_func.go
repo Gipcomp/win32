@@ -406,6 +406,15 @@ func EnumChildWindows(hWndParent handle.HWND, lpEnumFunc, lParam uintptr) bool {
 	return ret != 0
 }
 
+func FillRect(hDc gdi32.HDC, lprc *gdi32.RECT, hbr gdi32.HBRUSH) int {
+	ret, _, _ := syscall.Syscall(fillRect.Addr(), 3,
+		uintptr(hDc),
+		uintptr(unsafe.Pointer(lprc)),
+		uintptr(hbr))
+
+	return int(ret)
+}
+
 func FindWindow(lpClassName, lpWindowName *uint16) handle.HWND {
 	ret, _, _ := syscall.Syscall(findWindow.Addr(), 2,
 		uintptr(unsafe.Pointer(lpClassName)),

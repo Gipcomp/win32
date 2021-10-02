@@ -53,6 +53,7 @@ var (
 	endDialog                   *windows.LazyProc
 	endPaint                    *windows.LazyProc
 	enumChildWindows            *windows.LazyProc
+	fillRect                    *windows.LazyProc
 	findWindow                  *windows.LazyProc
 	getActiveWindow             *windows.LazyProc
 	getAncestor                 *windows.LazyProc
@@ -203,6 +204,7 @@ func init() {
 	endDialog = libuser32.NewProc("EndDialog")
 	endPaint = libuser32.NewProc("EndPaint")
 	enumChildWindows = libuser32.NewProc("EnumChildWindows")
+	fillRect = libuser32.NewProc("FillRect")
 	findWindow = libuser32.NewProc("FindWindowW")
 	getActiveWindow = libuser32.NewProc("GetActiveWindow")
 	getAncestor = libuser32.NewProc("GetAncestor")
