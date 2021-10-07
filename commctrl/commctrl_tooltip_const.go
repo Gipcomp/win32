@@ -6,7 +6,7 @@
 
 package commctrl
 
-import "github.com/Gipcomp/winapi/user32"
+import "github.com/Gipcomp/win32/user32"
 
 // ToolTip styles
 const (

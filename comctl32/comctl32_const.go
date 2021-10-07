@@ -6,7 +6,7 @@
 
 package comctl32
 
-import "github.com/Gipcomp/winapi/user32"
+import "github.com/Gipcomp/win32/user32"
 
 const (
 	BCM_FIRST            = 0x1600

@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/handle"
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/win"
 )
 
 func (obj *ITaskbarList3) SetProgressValue(hwnd handle.HWND, current uint32, length uint32) win.HRESULT {

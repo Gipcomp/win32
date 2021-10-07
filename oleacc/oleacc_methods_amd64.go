@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/handle"
-	"github.com/Gipcomp/winapi/oleaut32"
-	"github.com/Gipcomp/winapi/win"
-	"github.com/Gipcomp/winapi/winuser"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/oleaut32"
+	"github.com/Gipcomp/win32/win"
+	"github.com/Gipcomp/win32/winuser"
 )
 
 // SetPropValue identifies the accessible element to be annotated, specify the property to be annotated, and provide a new value for that property.

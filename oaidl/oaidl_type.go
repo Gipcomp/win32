@@ -6,7 +6,7 @@
 
 package oaidl
 
-import "github.com/Gipcomp/winapi/ole32"
+import "github.com/Gipcomp/win32/ole32"
 
 type SCODE int32
 

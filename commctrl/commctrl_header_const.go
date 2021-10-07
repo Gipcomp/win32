@@ -6,7 +6,7 @@
 
 package commctrl
 
-import "github.com/Gipcomp/winapi/comctl32"
+import "github.com/Gipcomp/win32/comctl32"
 
 const (
 	HDS_NOSIZING = 0x0800

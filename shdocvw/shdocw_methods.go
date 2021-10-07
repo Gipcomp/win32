@@ -10,11 +10,11 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/handle"
-	"github.com/Gipcomp/winapi/ole32"
-	"github.com/Gipcomp/winapi/oleaut32"
-	"github.com/Gipcomp/winapi/user32"
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/ole32"
+	"github.com/Gipcomp/win32/oleaut32"
+	"github.com/Gipcomp/win32/user32"
+	"github.com/Gipcomp/win32/win"
 )
 
 func (wb2 *IWebBrowser2) QueryInterface(riid ole32.REFIID, ppvObject *unsafe.Pointer) win.HRESULT {

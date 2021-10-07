@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/win"
 )
 
 func WglCopyContext(hglrcSrc, hglrcDst HGLRC, mask uint) bool {

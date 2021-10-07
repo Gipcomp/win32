@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/win32/kernel32"
 )
 
 // PdhAddCounter adds the specified counter to the query. This is the internationalized version. Preferably, use the

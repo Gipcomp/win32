@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/win"
 )
 
 func EqualREFIID(a, b REFIID) bool {

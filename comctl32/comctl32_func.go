@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/kernel32"
-	"github.com/Gipcomp/winapi/user32"
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/kernel32"
+	"github.com/Gipcomp/win32/user32"
+	"github.com/Gipcomp/win32/win"
 )
 
 func ImageList_Add(himl HIMAGELIST, hbmImage, hbmMask gdi32.HBITMAP) int32 {

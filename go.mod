@@ -1,4 +1,4 @@
-module github.com/Gipcomp/winapi
+module github.com/Gipcomp/win32
 
 go 1.17
 

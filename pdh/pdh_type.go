@@ -6,7 +6,7 @@
 
 package pdh
 
-import "github.com/Gipcomp/winapi/handle"
+import "github.com/Gipcomp/win32/handle"
 
 type (
 	PDH_HQUERY   handle.HANDLE // query handle

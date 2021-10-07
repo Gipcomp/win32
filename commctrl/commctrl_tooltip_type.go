@@ -9,9 +9,9 @@ package commctrl
 import (
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/handle"
-	"github.com/Gipcomp/winapi/kernel32"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/kernel32"
 )
 
 type TOOLINFO struct {

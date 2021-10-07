@@ -7,8 +7,8 @@
 package opengl32
 
 import (
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/handle"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/handle"
 )
 
 type (

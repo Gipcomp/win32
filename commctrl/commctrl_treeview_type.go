@@ -7,9 +7,9 @@
 package commctrl
 
 import (
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/handle"
-	"github.com/Gipcomp/winapi/user32"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/user32"
 )
 
 type HTREEITEM handle.HANDLE

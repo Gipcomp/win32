@@ -10,12 +10,12 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/gdi32"
-	"github.com/Gipcomp/winapi/kernel32"
-	"github.com/Gipcomp/winapi/objidl"
-	"github.com/Gipcomp/winapi/ole32"
-	"github.com/Gipcomp/winapi/richedit"
-	"github.com/Gipcomp/winapi/win"
+	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/kernel32"
+	"github.com/Gipcomp/win32/objidl"
+	"github.com/Gipcomp/win32/ole32"
+	"github.com/Gipcomp/win32/richedit"
+	"github.com/Gipcomp/win32/win"
 )
 
 func (obj *IRichEditOle) QueryInterface(riid ole32.REFIID, ppvObject *unsafe.Pointer) win.HRESULT {

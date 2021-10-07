@@ -6,7 +6,7 @@
 
 package advapi32
 
-import "github.com/Gipcomp/winapi/handle"
+import "github.com/Gipcomp/win32/handle"
 
 type (
 	ACCESS_MASK uint32

@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/winapi/handle"
+	"github.com/Gipcomp/win32/handle"
 )
 
 func RGB(r, g, b byte) COLORREF {

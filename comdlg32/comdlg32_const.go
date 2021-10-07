@@ -6,7 +6,7 @@
 
 package comdlg32
 
-import "github.com/Gipcomp/winapi/gdi32"
+import "github.com/Gipcomp/win32/gdi32"
 
 // Common error codes
 const (

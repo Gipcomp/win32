@@ -6,7 +6,7 @@
 
 package oleacc
 
-import "github.com/Gipcomp/winapi/ole32"
+import "github.com/Gipcomp/win32/ole32"
 
 var (
 	PROPID_ACC_NAME             = MSAAPROPID{0x608d3df8, 0x8128, 0x4aa7, [8]byte{0xa4, 0x28, 0xf5, 0x5e, 0x49, 0x26, 0x72, 0x91}}
