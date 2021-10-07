@@ -114,3 +114,21 @@ func (obj *IOleObject) DoVerb(iVerb int32, lpmsg *user32.MSG, pActiveSite *IOleC
 
 	return win.HRESULT(ret)
 }
+
+func (cpc *IConnectionPointContainer) Release() uint32 {
+	ret, _, _ := syscall.Syscall(cpc.LpVtbl.Release, 1,
+		uintptr(unsafe.Pointer(cpc)),
+		0,
+		0)
+
+	return uint32(ret)
+}
+
+func (cpc *IConnectionPointContainer) FindConnectionPoint(riid REFIID, ppCP **IConnectionPoint) win.HRESULT {
+	ret, _, _ := syscall.Syscall(cpc.LpVtbl.FindConnectionPoint, 3,
+		uintptr(unsafe.Pointer(cpc)),
+		uintptr(unsafe.Pointer(riid)),
+		uintptr(unsafe.Pointer(ppCP)))
+
+	return win.HRESULT(ret)
+}
