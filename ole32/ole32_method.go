@@ -10,6 +10,7 @@ import (
 	"syscall"
 	"unsafe"
 
+	"github.com/Gipcomp/win32/gdi32"
 	"github.com/Gipcomp/win32/win"
 )
 
@@ -30,6 +31,24 @@ func (cf *IClassFactory) CreateInstance(pUnkOuter *IUnknown, riid REFIID, ppvObj
 		uintptr(unsafe.Pointer(ppvObject)),
 		0,
 		0)
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleInPlaceObject) Release() uint32 {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.Release, 1,
+		uintptr(unsafe.Pointer(obj)),
+		0,
+		0)
+
+	return uint32(ret)
+}
+
+func (obj *IOleInPlaceObject) SetObjectRects(lprcPosRect, lprcClipRect *gdi32.RECT) win.HRESULT {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.SetObjectRects, 3,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(unsafe.Pointer(lprcPosRect)),
+		uintptr(unsafe.Pointer(lprcClipRect)))
 
 	return win.HRESULT(ret)
 }
