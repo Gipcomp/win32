@@ -132,3 +132,21 @@ func (cpc *IConnectionPointContainer) FindConnectionPoint(riid REFIID, ppCP **IC
 
 	return win.HRESULT(ret)
 }
+
+func (cp *IConnectionPoint) Release() uint32 {
+	ret, _, _ := syscall.Syscall(cp.LpVtbl.Release, 1,
+		uintptr(unsafe.Pointer(cp)),
+		0,
+		0)
+
+	return uint32(ret)
+}
+
+func (cp *IConnectionPoint) Advise(pUnkSink unsafe.Pointer, pdwCookie *uint32) win.HRESULT {
+	ret, _, _ := syscall.Syscall(cp.LpVtbl.Advise, 3,
+		uintptr(unsafe.Pointer(cp)),
+		uintptr(pUnkSink),
+		uintptr(unsafe.Pointer(pdwCookie)))
+
+	return win.HRESULT(ret)
+}
