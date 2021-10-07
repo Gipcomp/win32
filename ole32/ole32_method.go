@@ -11,6 +11,8 @@ import (
 	"unsafe"
 
 	"github.com/Gipcomp/win32/gdi32"
+	"github.com/Gipcomp/win32/handle"
+	"github.com/Gipcomp/win32/user32"
 	"github.com/Gipcomp/win32/win"
 )
 
@@ -49,6 +51,66 @@ func (obj *IOleInPlaceObject) SetObjectRects(lprcPosRect, lprcClipRect *gdi32.RE
 		uintptr(unsafe.Pointer(obj)),
 		uintptr(unsafe.Pointer(lprcPosRect)),
 		uintptr(unsafe.Pointer(lprcClipRect)))
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleObject) QueryInterface(riid REFIID, ppvObject *unsafe.Pointer) win.HRESULT {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.QueryInterface, 3,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(unsafe.Pointer(riid)),
+		uintptr(unsafe.Pointer(ppvObject)))
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleObject) Release() uint32 {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.Release, 1,
+		uintptr(unsafe.Pointer(obj)),
+		0,
+		0)
+
+	return uint32(ret)
+}
+
+func (obj *IOleObject) SetClientSite(pClientSite *IOleClientSite) win.HRESULT {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.SetClientSite, 2,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(unsafe.Pointer(pClientSite)),
+		0)
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleObject) SetHostNames(szContainerApp, szContainerObj *uint16) win.HRESULT {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.SetHostNames, 3,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(unsafe.Pointer(szContainerApp)),
+		uintptr(unsafe.Pointer(szContainerObj)))
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleObject) Close(dwSaveOption uint32) win.HRESULT {
+	ret, _, _ := syscall.Syscall(obj.LpVtbl.Close, 2,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(dwSaveOption),
+		0)
+
+	return win.HRESULT(ret)
+}
+
+func (obj *IOleObject) DoVerb(iVerb int32, lpmsg *user32.MSG, pActiveSite *IOleClientSite, lindex int32, hwndParent handle.HWND, lprcPosRect *gdi32.RECT) win.HRESULT {
+	ret, _, _ := syscall.Syscall9(obj.LpVtbl.DoVerb, 7,
+		uintptr(unsafe.Pointer(obj)),
+		uintptr(iVerb),
+		uintptr(unsafe.Pointer(lpmsg)),
+		uintptr(unsafe.Pointer(pActiveSite)),
+		uintptr(lindex),
+		uintptr(hwndParent),
+		uintptr(unsafe.Pointer(lprcPosRect)),
+		0,
+		0)
 
 	return win.HRESULT(ret)
 }
