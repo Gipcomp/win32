@@ -31,6 +31,7 @@ var (
 	oleInitialize         *windows.LazyProc
 	oleSetContainedObject *windows.LazyProc
 	oleUninitialize       *windows.LazyProc
+	CoInitializeExCall    *windows.LazyProc
 )
 
 func init() {
