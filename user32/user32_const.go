@@ -1451,3 +1451,9 @@ const (
 	WB_RIGHT       = 1
 	WB_ISDELIMITER = 2
 )
+
+// Used for opacity of layer ore the transparency color
+const (
+	LWA_ALPHA    = 0x00000002 // Use bAlpha to determine the opacity of the layered window
+	LWA_COLORKEY = 0x00000001 // Use crKey as the transparency color
+)

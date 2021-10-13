@@ -135,6 +135,7 @@ var (
 	setCursorPos                *windows.LazyProc
 	setFocus                    *windows.LazyProc
 	setForegroundWindow         *windows.LazyProc
+	setLayeredWindowAttributes  *windows.LazyProc
 	setMenu                     *windows.LazyProc
 	setMenuDefaultItem          *windows.LazyProc
 	setMenuInfo                 *windows.LazyProc
@@ -291,6 +292,7 @@ func init() {
 	setCursorPos = libuser32.NewProc("SetCursorPos")
 	setFocus = libuser32.NewProc("SetFocus")
 	setForegroundWindow = libuser32.NewProc("SetForegroundWindow")
+	setLayeredWindowAttributes = libuser32.NewProc("SetLayeredWindowAttributes")
 	setMenu = libuser32.NewProc("SetMenu")
 	setMenuDefaultItem = libuser32.NewProc("SetMenuDefaultItem")
 	setMenuInfo = libuser32.NewProc("SetMenuInfo")

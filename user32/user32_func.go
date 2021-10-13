@@ -1220,6 +1220,19 @@ func SetForegroundWindow(hWnd handle.HWND) bool {
 	return ret != 0
 }
 
+func SetLayeredWindowAttributes(hwnd handle.HWND, crKey gdi32.COLORREF, bAlpha byte, dwFlags uint32) bool {
+
+	ret, _, _ := syscall.Syscall6(setLayeredWindowAttributes.Addr(), 4,
+		uintptr(hwnd),
+		uintptr(crKey),
+		uintptr(bAlpha),
+		uintptr(dwFlags),
+		0,
+		0)
+
+	return ret != 0
+}
+
 func SetMenu(hWnd handle.HWND, hMenu winuser.HMENU) bool {
 	ret, _, _ := syscall.Syscall(setMenu.Addr(), 2,
 		uintptr(hWnd),
