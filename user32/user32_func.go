@@ -7,6 +7,7 @@
 package user32
 
 import (
+	"errors"
 	"syscall"
 	"unsafe"
 
@@ -471,6 +472,16 @@ func GetClientRect(hWnd handle.HWND, rect *gdi32.RECT) bool {
 	return ret != 0
 }
 
+func GetClientRectWV2(hwnd handle.HWND) (*gdi32.RECT, error) {
+	var rect gdi32.RECT
+	_, _, err := getClientRect.Call(uintptr(hwnd), uintptr(unsafe.Pointer(&rect)))
+	if err != nil && !errors.Is(err, syscall.Errno(0)) {
+		return nil, err
+	}
+
+	return &rect, nil
+}
+
 func GetClipboardData(uFormat uint32) handle.HANDLE {
 	ret, _, _ := syscall.Syscall(getClipboardData.Addr(), 1,
 		uintptr(uFormat),
@@ -626,6 +637,23 @@ func GetMessage(msg *MSG, hWnd handle.HWND, msgFilterMin, msgFilterMax uint32) w
 		0)
 
 	return win.BOOL(ret)
+}
+
+func GetMessageWV2() (*MSG, error) {
+	var msg MSG
+
+	r, _, _ := getMessage.Call(
+		uintptr(unsafe.Pointer(&msg)),
+		0,
+		0,
+		0,
+	)
+
+	if int32(r) == -1 {
+		return nil, windows.GetLastError()
+	}
+
+	return &msg, nil
 }
 
 func GetMonitorInfo(hMonitor HMONITOR, lpmi *MONITORINFO) bool {
@@ -1453,6 +1481,15 @@ func TranslateMessage(msg *MSG) bool {
 		0)
 
 	return ret != 0
+}
+
+func TranslateMessageWV2(msg *MSG) error {
+	_, _, err := translateMessage.Call(uintptr(unsafe.Pointer(msg)))
+	if err != nil && !errors.Is(err, syscall.Errno(0)) {
+		return err
+	}
+
+	return nil
 }
 
 func UnhookWinEvent(hWinHookEvent kernel32.HWINEVENTHOOK) bool {
