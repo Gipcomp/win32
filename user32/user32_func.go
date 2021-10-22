@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build windows
 // +build windows
 
 package user32
@@ -920,6 +921,20 @@ func LoadImage(hinst kernel32.HINSTANCE, lpszName *uint16, uType uint32, cxDesir
 	return handle.HANDLE(ret)
 }
 
+func LoadImageWV2(hinst kernel32.HINSTANCE, lpszName *uint16, cxDesired, cyDesired int32) handle.HANDLE {
+	hwnd, _, err := loadImage.Call(
+		uintptr(hinst),
+		32512,
+		uintptr(cxDesired),
+		uintptr(cyDesired),
+		0)
+	if err != nil && !errors.Is(err, syscall.Errno(0)) {
+		return 0
+	}
+
+	return handle.HANDLE(hwnd)
+}
+
 func LoadMenu(hinst kernel32.HINSTANCE, name *uint16) winuser.HMENU {
 	ret, _, _ := syscall.Syscall(loadMenu.Addr(), 2,
 		uintptr(hinst),
@@ -1415,6 +1430,18 @@ func SetWindowPos(hWnd, hWndInsertAfter handle.HWND, x, y, width, height int32, 
 		0)
 
 	return ret != 0
+}
+
+func SetWindowText(hwnd handle.HWND, text string) error {
+	strPtr, err := syscall.UTF16PtrFromString(text)
+	if err != nil {
+		return err
+	}
+	if win.TRUE != SendMessage(hwnd, WM_SETTEXT, 0, uintptr(unsafe.Pointer(strPtr))) {
+		return errors.New("WM_SETTEXT failed")
+	}
+
+	return nil
 }
 
 func ShowWindow(hWnd handle.HWND, nCmdShow int32) bool {
