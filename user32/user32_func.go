@@ -921,7 +921,7 @@ func LoadImage(hinst kernel32.HINSTANCE, lpszName *uint16, uType uint32, cxDesir
 	return handle.HANDLE(ret)
 }
 
-func LoadImageWV2(hinst kernel32.HINSTANCE, lpszName *uint16, cxDesired, cyDesired int32) handle.HANDLE {
+func LoadImageWV2(hinst kernel32.HINSTANCE, cxDesired, cyDesired int32) handle.HANDLE {
 	hwnd, _, err := loadImage.Call(
 		uintptr(hinst),
 		32512,
