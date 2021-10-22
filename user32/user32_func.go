@@ -243,6 +243,18 @@ func DefWindowProc(hWnd handle.HWND, Msg uint32, wParam, lParam uintptr) uintptr
 	return ret
 }
 
+func DefWindowProcWV2(hWnd, Msg uintptr, wParam, lParam uintptr) uintptr {
+	ret, _, _ := syscall.Syscall6(defWindowProc.Addr(), 4,
+		hWnd,
+		Msg,
+		wParam,
+		lParam,
+		0,
+		0)
+
+	return ret
+}
+
 func DeleteMenu(hMenu winuser.HMENU, uPosition uint32, uFlags uint32) bool {
 	ret, _, _ := syscall.Syscall(deleteMenu.Addr(), 3,
 		uintptr(hMenu),
