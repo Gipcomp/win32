@@ -130,7 +130,10 @@ func GetModuleHandle(lpModuleName *uint16) HINSTANCE {
 }
 
 func GetModuleHandleEx(flags uint32, moduleName *uint16, module *handle.HWND) (err error) {
-	r1, _, e1 := syscall.Syscall(getModuleHandleExW.Addr(), 3, uintptr(flags), uintptr(unsafe.Pointer(moduleName)), uintptr(unsafe.Pointer(module)))
+	r1, _, e1 := syscall.Syscall(getModuleHandleExW.Addr(), 3,
+		uintptr(flags),
+		uintptr(unsafe.Pointer(moduleName)),
+		uintptr(unsafe.Pointer(module)))
 	if r1 == 0 {
 		err = e1
 	}

@@ -41,6 +41,7 @@ var (
 	mulDiv                             *windows.LazyProc
 	loadResource                       *windows.LazyProc
 	lockResource                       *windows.LazyProc
+	PostThreadMessageW                 *windows.LazyProc
 	setLastError                       *windows.LazyProc
 	sizeofResource                     *windows.LazyProc
 	systemTimeToFileTime               *windows.LazyProc
@@ -78,6 +79,7 @@ func init() {
 	mulDiv = libkernel32.NewProc("MulDiv")
 	loadResource = libkernel32.NewProc("LoadResource")
 	lockResource = libkernel32.NewProc("LockResource")
+	PostThreadMessageW = libkernel32.NewProc("PostThreadMessageW")
 	setLastError = libkernel32.NewProc("SetLastError")
 	sizeofResource = libkernel32.NewProc("SizeofResource")
 	systemTimeToFileTime = libkernel32.NewProc("SystemTimeToFileTime")
