@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build windows
 // +build windows
 
 package kernel32
@@ -126,6 +127,14 @@ func GetModuleHandle(lpModuleName *uint16) HINSTANCE {
 		0)
 
 	return HINSTANCE(ret)
+}
+
+func GetModuleHandleEx(flags uint32, moduleName *uint16, module *handle.HWND) (err error) {
+	r1, _, e1 := syscall.Syscall(getModuleHandleExW.Addr(), 3, uintptr(flags), uintptr(unsafe.Pointer(moduleName)), uintptr(unsafe.Pointer(module)))
+	if r1 == 0 {
+		err = e1
+	}
+	return
 }
 
 func GetNumberFormat(Locale LCID, dwFlags uint32, lpValue *uint16, lpFormat *NUMBERFMT, lpNumberStr *uint16, cchNumber int32) int32 {

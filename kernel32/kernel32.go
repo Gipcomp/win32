@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build windows
 // +build windows
 
 package kernel32
@@ -25,6 +26,7 @@ var (
 	getLocaleInfo                      *windows.LazyProc
 	getLogicalDriveStrings             *windows.LazyProc
 	getModuleHandle                    *windows.LazyProc
+	getModuleHandleExW                 *windows.LazyProc
 	getNumberFormat                    *windows.LazyProc
 	getPhysicallyInstalledSystemMemory *windows.LazyProc
 	getProfileString                   *windows.LazyProc
@@ -61,6 +63,7 @@ func init() {
 	getLocaleInfo = libkernel32.NewProc("GetLocaleInfoW")
 	getLogicalDriveStrings = libkernel32.NewProc("GetLogicalDriveStringsW")
 	getModuleHandle = libkernel32.NewProc("GetModuleHandleW")
+	getModuleHandleExW = libkernel32.NewProc("GetModuleHandleExW")
 	getNumberFormat = libkernel32.NewProc("GetNumberFormatW")
 	getPhysicallyInstalledSystemMemory = libkernel32.NewProc("GetPhysicallyInstalledSystemMemory")
 	getProfileString = libkernel32.NewProc("GetProfileStringW")
