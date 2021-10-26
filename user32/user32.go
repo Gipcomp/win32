@@ -150,6 +150,7 @@ var (
 	setWindowLongPtr            *windows.LazyProc
 	setWindowPlacement          *windows.LazyProc
 	setWindowPos                *windows.LazyProc
+	showCursor                  *windows.LazyProc
 	showWindow                  *windows.LazyProc
 	systemParametersInfo        *windows.LazyProc
 	trackMouseEvent             *windows.LazyProc
@@ -312,6 +313,7 @@ func init() {
 	}
 	setWindowPlacement = libuser32.NewProc("SetWindowPlacement")
 	setWindowPos = libuser32.NewProc("SetWindowPos")
+	showCursor = libuser32.NewProc("ShowCursor")
 	showWindow = libuser32.NewProc("ShowWindow")
 	systemParametersInfo = libuser32.NewProc("SystemParametersInfoW")
 	trackMouseEvent = libuser32.NewProc("TrackMouseEvent")

@@ -1456,6 +1456,17 @@ func SetWindowText(hwnd handle.HWND, text string) error {
 	return nil
 }
 
+func ShowCursor(show bool) int {
+	bShow := uintptr(0)
+	if show {
+		bShow = uintptr(1)
+	}
+	ret, _, _ := syscall.Syscall(showCursor.Addr(), 1,
+			bShow,
+			0,
+			0)
+	return int(ret)
+}
 func ShowWindow(hWnd handle.HWND, nCmdShow int32) bool {
 	ret, _, _ := syscall.Syscall(showWindow.Addr(), 2,
 		uintptr(hWnd),
