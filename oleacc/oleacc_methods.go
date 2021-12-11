@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/ole32"
-	"github.com/Gipcomp/win32/win"
-	"github.com/Gipcomp/win32/winuser"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/ole32"
+	"github.com/gfphoenix/win32/win"
+	"github.com/gfphoenix/win32/winuser"
 )
 
 func (obj *IAccPropServices) QueryInterface(riid ole32.REFIID, ppvObject *unsafe.Pointer) win.HRESULT {

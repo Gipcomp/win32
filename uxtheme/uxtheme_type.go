@@ -7,9 +7,9 @@
 package uxtheme
 
 import (
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/win"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/win"
 )
 
 type HTHEME handle.HANDLE

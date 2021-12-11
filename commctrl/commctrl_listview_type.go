@@ -7,9 +7,9 @@
 package commctrl
 
 import (
-	"github.com/Gipcomp/win32/comctl32"
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/user32"
+	"github.com/gfphoenix/win32/comctl32"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/user32"
 )
 
 type LVCOLUMN struct {

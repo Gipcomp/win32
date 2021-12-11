@@ -7,9 +7,9 @@
 package comctl32
 
 import (
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/user32"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/user32"
 )
 
 type HIMAGELIST handle.HANDLE

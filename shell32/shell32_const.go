@@ -6,7 +6,7 @@
 
 package shell32
 
-import "github.com/Gipcomp/win32/user32"
+import "github.com/gfphoenix/win32/user32"
 
 const (
 	CSIDL_DESKTOP                 = 0x00

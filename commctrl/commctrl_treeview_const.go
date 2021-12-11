@@ -6,7 +6,7 @@
 
 package commctrl
 
-import "github.com/Gipcomp/win32/comctl32"
+import "github.com/gfphoenix/win32/comctl32"
 
 // TreeView styles
 const (

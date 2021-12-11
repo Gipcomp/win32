@@ -6,7 +6,7 @@
 
 package commctrl
 
-import "github.com/Gipcomp/win32/comctl32"
+import "github.com/gfphoenix/win32/comctl32"
 
 const TCM_FIRST = 0x1300
 const TCN_FIRST = -550

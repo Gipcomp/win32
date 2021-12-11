@@ -7,9 +7,9 @@
 package richole
 
 import (
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/objidl"
-	"github.com/Gipcomp/win32/ole32"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/objidl"
+	"github.com/gfphoenix/win32/ole32"
 )
 
 type REOBJECT struct {

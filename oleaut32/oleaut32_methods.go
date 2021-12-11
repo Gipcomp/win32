@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/win32/win"
+	"github.com/gfphoenix/win32/win"
 )
 
 func StringToBSTR(value string) *uint16 /*BSTR*/ {

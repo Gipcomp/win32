@@ -9,7 +9,7 @@ package gdi32
 import (
 	"unsafe"
 
-	"github.com/Gipcomp/win32/handle"
+	"github.com/gfphoenix/win32/handle"
 )
 
 type (

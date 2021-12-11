@@ -6,7 +6,7 @@
 
 package kernel32
 
-import "github.com/Gipcomp/win32/handle"
+import "github.com/gfphoenix/win32/handle"
 
 // To solve import cycle:
 // HANDLE moved to handle.HANDLE

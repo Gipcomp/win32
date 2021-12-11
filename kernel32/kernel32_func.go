@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/Gipcomp/win32/handle"
+	"github.com/gfphoenix/win32/handle"
 )
 
 func ActivateActCtx(ctx handle.HANDLE) (uintptr, bool) {
