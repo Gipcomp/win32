@@ -1,6 +1,5 @@
 module github.com/gfphoenix/win32
 
-go 1.17
+go 1.16
 
-require golang.org/x/sys v0.0.0-20211007075335-d3039528d8ac
-
+require golang.org/x/sys v0.0.0-20211210111614-af8b64212486
