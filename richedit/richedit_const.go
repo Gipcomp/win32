@@ -6,7 +6,7 @@
 
 package richedit
 
-import "github.com/Gipcomp/win32/user32"
+import "github.com/gfphoenix/win32/user32"
 
 const (
 	// NOTE:  MSFTEDIT.DLL only registers MSFTEDIT_CLASS.  If an application wants

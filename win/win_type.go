@@ -7,8 +7,8 @@
 package win
 
 import (
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/kernel32"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/kernel32"
 )
 
 type (

@@ -7,8 +7,8 @@
 package winuser
 
 import (
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/handle"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/handle"
 )
 
 // winuser.HMENU removed from user32

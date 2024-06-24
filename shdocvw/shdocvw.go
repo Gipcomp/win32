@@ -6,7 +6,7 @@
 
 package shdocvw
 
-import "github.com/Gipcomp/win32/ole32"
+import "github.com/gfphoenix/win32/ole32"
 
 var (
 	CLSID_WebBrowser            = ole32.CLSID{Data1: 0x8856F961, Data2: 0x340A, Data3: 0x11D0, Data4: [8]byte{0xA9, 0x6B, 0x00, 0xC0, 0x4F, 0xD7, 0x05, 0xA2}}

@@ -6,7 +6,7 @@
 
 package tom
 
-import "github.com/Gipcomp/win32/oleaut32"
+import "github.com/gfphoenix/win32/oleaut32"
 
 type TomConstants uint32
 

@@ -9,9 +9,9 @@ package comdlg32
 import (
 	"unsafe"
 
-	"github.com/Gipcomp/win32/gdi32"
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/kernel32"
+	"github.com/gfphoenix/win32/gdi32"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/kernel32"
 )
 
 type (

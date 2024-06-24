@@ -9,9 +9,9 @@ package ole32
 import (
 	"syscall"
 
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/user32"
-	"github.com/Gipcomp/win32/win"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/user32"
+	"github.com/gfphoenix/win32/win"
 )
 
 type IID syscall.GUID

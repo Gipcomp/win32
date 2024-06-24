@@ -9,9 +9,9 @@ package shell32
 import (
 	"syscall"
 
-	"github.com/Gipcomp/win32/handle"
-	"github.com/Gipcomp/win32/kernel32"
-	"github.com/Gipcomp/win32/user32"
+	"github.com/gfphoenix/win32/handle"
+	"github.com/gfphoenix/win32/kernel32"
+	"github.com/gfphoenix/win32/user32"
 )
 
 type CSIDL uint32

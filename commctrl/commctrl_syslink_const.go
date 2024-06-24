@@ -6,7 +6,7 @@
 
 package commctrl
 
-import "github.com/Gipcomp/win32/user32"
+import "github.com/gfphoenix/win32/user32"
 
 const (
 	INVALID_LINK_INDEX = -1
